@@ -38,11 +38,11 @@
 
 ## 4. Products grid
 
-- [ ] 4.1 In `src/content/products.ts`, import
+- [x] 4.1 In `src/content/products.ts`, import
       `product-risk-assessment-platform_thumbnail.png` and replace the `client-a` entry with
       `{ id: 'risk-assessment-platform', name: 'Risk Assessment Platform', thumbnail: ... }`, keeping
       it fourth
-- [ ] 4.2 Confirm `client-b` stays the only `thumbnail: null` entry and the grid still shows five
+- [x] 4.2 Confirm `client-b` stays the only `thumbnail: null` entry and the grid still shows five
       entries
 
 ## 5. Template (done ahead of apply)

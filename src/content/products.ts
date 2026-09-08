@@ -1,6 +1,7 @@
 import frameworksThumb from '@/assets/portfolio/case-studies/whitehawk/products/compliance-frameworks/frameworks_thumbnail.png'
 import portfolioReportThumb from '@/assets/portfolio/case-studies/whitehawk/products/cyber-risk-portfolio/portfolio_report-thumbnail.png'
 import cyberRiskRatingThumb from '@/assets/portfolio/case-studies/whitehawk/products/cyber-risk-rating/cyber-risk-scorecard_thumbnail.png'
+import riskAssessmentPlatformThumb from '@/assets/portfolio/case-studies/whitehawk/products/risk-assessment-platform/product-risk-assessment-platform_thumbnail.png'
 
 export interface Product {
   id: string
@@ -24,7 +25,11 @@ export const PRODUCTS: Array<Product> = [
     name: 'Compliance Frameworks',
     thumbnail: frameworksThumb,
   },
-  { id: 'client-a', name: 'Client A', thumbnail: null },
+  {
+    id: 'risk-assessment-platform',
+    name: 'Risk Assessment Platform',
+    thumbnail: riskAssessmentPlatformThumb,
+  },
   { id: 'client-b', name: 'Client B', thumbnail: null },
 ]
 
