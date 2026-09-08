@@ -11,21 +11,21 @@
 
 ## 2. Content module
 
-- [ ] 2.1 In `src/content/product-risk-assessment-platform.ts`, replace the commented draft with an
+- [x] 2.1 In `src/content/product-risk-assessment-platform.ts`, replace the commented draft with an
       exported `RISK_ASSESSMENT_PLATFORM: ProductChapter`, importing both assets through `@/`
-- [ ] 2.2 Set `title: 'Risk Assessment Platform'` and `subtitle: 'The Shape of Progress'`, and omit
+- [x] 2.2 Set `title: 'Risk Assessment Platform'` and `subtitle: 'The Shape of Progress'`, and omit
       `masthead`
-- [ ] 2.3 Add the four blocks in order: Specimen, Provenance, Field Guide, Later Observations, with
+- [x] 2.3 Add the four blocks in order: Specimen, Provenance, Field Guide, Later Observations, with
       the drafted prose transferred verbatim
-- [ ] 2.4 Add artifact 1 (`product-risk-assessment-platform_1.png`) as a `single` slot at `xl` inside
+- [x] 2.4 Add artifact 1 (`product-risk-assessment-platform_1.png`) as a `single` slot at `xl` inside
       the Specimen block, after its prose, carrying caption 1
-- [ ] 2.5 Add artifact 2 (`product-risk-assessment-platform_2.png`) as a `single` slot at `xl` inside
+- [x] 2.5 Add artifact 2 (`product-risk-assessment-platform_2.png`) as a `single` slot at `xl` inside
       the Field Guide block, carrying caption 2
-- [ ] 2.6 Write alt text for both artifacts describing interface elements and states only, naming no
+- [x] 2.6 Write alt text for both artifacts describing interface elements and states only, naming no
       client or product brand
-- [ ] 2.7 Set `fieldNote` from the drafted field note with the `**Field note**:` prefix and its
+- [x] 2.7 Set `fieldNote` from the drafted field note with the `**Field note**:` prefix and its
       trailing space stripped, since `FieldNote` renders that label itself
-- [ ] 2.8 Confirm no commented copy, no artifact plan table, and no em dashes remain in the file
+- [x] 2.8 Confirm no commented copy, no artifact plan table, and no em dashes remain in the file
 
 ## 3. Page and route
 
