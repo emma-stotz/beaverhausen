@@ -59,15 +59,15 @@
 
 ## 6. Verify
 
-- [ ] 6.1 Run `pnpm run format`, then `pnpm run lint --fix`, then `pnpm run build`
-- [ ] 6.2 In the browser, load `/portfolio/whitehawk/risk-assessment-platform` and confirm block
+- [x] 6.1 Run `pnpm run format`, then `pnpm run lint --fix`, then `pnpm run build`
+- [x] 6.2 In the browser, load `/portfolio/whitehawk/risk-assessment-platform` and confirm block
       order, no masthead, no hero above the first block, and both artifacts with captions
-- [ ] 6.3 Confirm artifact 1's question text and "Last answered by" lines are legible at desktop
+- [x] 6.3 Confirm artifact 1's question text and "Last answered by" lines are legible at desktop
       width; if `xl` reads as a dead scroll rather than evidence, note it and revisit the width
       requirement in the spec before changing it
-- [ ] 6.4 Check the page at 320px, tablet, and desktop for horizontal page scroll
-- [ ] 6.5 Check the chapter in dark mode: headings `iron-orange`, body `enamel`, captions `cream`
-- [ ] 6.6 Confirm `/portfolio/whitehawk/client-a` renders the not-found page and does not redirect
-- [ ] 6.7 Confirm the products grid shows `Risk Assessment Platform` fourth with its thumbnail, and
+- [x] 6.4 Check the page at 320px, tablet, and desktop for horizontal page scroll
+- [x] 6.5 Check the chapter in dark mode: headings `iron-orange`, body `enamel`, captions `cream`
+- [x] 6.6 Confirm `/portfolio/whitehawk/client-a` renders the not-found page and does not redirect
+- [x] 6.7 Confirm the products grid shows `Risk Assessment Platform` fourth with its thumbnail, and
       that clicking it fires the water transition into the chapter
-- [ ] 6.8 Confirm the three tier 1 chapters render unchanged, mastheads and heroes intact
+- [x] 6.8 Confirm the three tier 1 chapters render unchanged, mastheads and heroes intact
