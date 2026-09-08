@@ -28,7 +28,12 @@ Before, tier 1 only:
 
 ```ts
 export interface ProductChapter {
-  masthead: { specimen: string; hypothesis: string; provenance: string; hero: ArtifactSlot }
+  masthead: {
+    specimen: string
+    hypothesis: string
+    provenance: string
+    hero: ArtifactSlot
+  }
   blocks: Array<ChapterBlock>
 }
 ```
@@ -38,7 +43,12 @@ After, tier 2 is the absence of a masthead:
 ```ts
 export interface ProductChapter {
   // Tier 1 only. A chapter without one is tier 2: its blocks start under the title.
-  masthead?: { specimen: string; hypothesis: string; provenance: string; hero: ArtifactSlot }
+  masthead?: {
+    specimen: string
+    hypothesis: string
+    provenance: string
+    hero: ArtifactSlot
+  }
   blocks: Array<ChapterBlock>
 }
 ```

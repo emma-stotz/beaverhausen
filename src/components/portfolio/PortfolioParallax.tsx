@@ -136,8 +136,7 @@ export function PortfolioParallax() {
                 width: 'var(--panel-width)',
               }}
               onFocus={(e) => {
-                if (usingKeyboard.current)
-                  scrollToHitAreaCenter(e.target)
+                if (usingKeyboard.current) scrollToHitAreaCenter(e.target)
               }}
             >
               <AutoHProvider>

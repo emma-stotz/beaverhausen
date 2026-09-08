@@ -161,11 +161,11 @@ Two tiers. The shipped products with numbers get the full template; the unshippe
 
 ### Tier 1: full chapters (450 to 600 words, four to six artifacts)
 
-| #   | Product                                 | Role in the portfolio                                                                                                                                                                                         | Numbers | Stub to replace |
-| --- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------------- |
-| 1   | Cyber Risk Rating                       | **Craft chapter.** Single-company risk report: data density, information hierarchy, score legibility, states for incomplete data. Home for the states matrix and component API.                               | Yes     | platform        |
-| 2   | Cyber Risk Portfolio                    | **System chapter.** One report's language scaled to many companies. Proof that tokens and components transfer across surfaces.                                                                                | Yes     | engage          |
-| 3   | Maturity Roadmap (CMMC and Essential 8) | **Constraint chapter.** Two compliance standards through one component set. What generalized, what refused to, where you special-cased.                                                                       | Yes     | comply          |
+| #   | Product                                 | Role in the portfolio                                                                                                                                                           | Numbers | Stub to replace |
+| --- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------------- |
+| 1   | Cyber Risk Rating                       | **Craft chapter.** Single-company risk report: data density, information hierarchy, score legibility, states for incomplete data. Home for the states matrix and component API. | Yes     | platform        |
+| 2   | Cyber Risk Portfolio                    | **System chapter.** One report's language scaled to many companies. Proof that tokens and components transfer across surfaces.                                                  | Yes     | engage          |
+| 3   | Maturity Roadmap (CMMC and Essential 8) | **Constraint chapter.** Two compliance standards through one component set. What generalized, what refused to, where you special-cased.                                         | Yes     | comply          |
 
 ### Tier 2: short explorations (250 to 350 words, one or two artifacts; up to 450 with Provenance)
 

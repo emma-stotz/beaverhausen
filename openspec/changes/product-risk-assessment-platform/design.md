@@ -52,7 +52,9 @@ Constraints that shaped this design:
 `masthead` becomes optional on `ProductChapter`. `ProductChapter.tsx` guards the render:
 
 ```tsx
-{chapter.masthead && <ChapterMasthead masthead={chapter.masthead} />}
+{
+  chapter.masthead && <ChapterMasthead masthead={chapter.masthead} />
+}
 ```
 
 `ChapterMasthead`'s prop type becomes `NonNullable<Chapter['masthead']>` so the guard does the

@@ -38,15 +38,15 @@ Observations), and the closing field note.
 The chapter SHALL render seven artifacts, each a `single` slot at `lg` width, using the files under
 `src/assets/portfolio/case-studies/whitehawk/products/cyber-risk-rating/`:
 
-| # | Block              | File                                                       |
-| - | ------------------ | ---------------------------------------------------------- |
-| 1 | Masthead hero      | `cyber-risk-scorecard_hero.png`                            |
-| 2 | Field Guide        | `report-state-model.svg`                                   |
-| 3 | Field Guide        | `admin_cyber-risk-scorecard_analyst-grid.png`              |
-| 4 | Field Guide        | `admin_cyber-risk-scorecard_risk-vectors.png`              |
-| 5 | Field Guide        | `cyber-risk-scorecard_risk-vector-analysis.png`            |
-| 6 | Divergence         | `cyber-risk-scorecard_compliance-grid-collapsed.png`       |
-| 7 | Later Observations | `cyber-risk-scorecard_info-icon.png`                       |
+| #   | Block              | File                                                 |
+| --- | ------------------ | ---------------------------------------------------- |
+| 1   | Masthead hero      | `cyber-risk-scorecard_hero.png`                      |
+| 2   | Field Guide        | `report-state-model.svg`                             |
+| 3   | Field Guide        | `admin_cyber-risk-scorecard_analyst-grid.png`        |
+| 4   | Field Guide        | `admin_cyber-risk-scorecard_risk-vectors.png`        |
+| 5   | Field Guide        | `cyber-risk-scorecard_risk-vector-analysis.png`      |
+| 6   | Divergence         | `cyber-risk-scorecard_compliance-grid-collapsed.png` |
+| 7   | Later Observations | `cyber-risk-scorecard_info-icon.png`                 |
 
 #### Scenario: Every artifact is present
 

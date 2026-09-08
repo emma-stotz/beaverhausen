@@ -72,12 +72,12 @@ comments.
 
 The chapter SHALL render exactly four blocks, in this order:
 
-| # | Heading            | Carries                                                               |
-| - | ------------------ | --------------------------------------------------------------------- |
-| 1 | Specimen           | The product, the client by domain, what made it hard, plus artifact 1 |
-| 2 | Provenance         | The delivery estimate and the leadership proof                        |
-| 3 | Field Guide        | Section grouping over one question per screen, plus artifact 2        |
-| 4 | Later Observations | What survived, and the honest revision note                           |
+| #   | Heading            | Carries                                                               |
+| --- | ------------------ | --------------------------------------------------------------------- |
+| 1   | Specimen           | The product, the client by domain, what made it hard, plus artifact 1 |
+| 2   | Provenance         | The delivery estimate and the leadership proof                        |
+| 3   | Field Guide        | Section grouping over one question per screen, plus artifact 2        |
+| 4   | Later Observations | What survived, and the honest revision note                           |
 
 No Working Hypothesis or Divergence block SHALL appear. Provenance appears as a block because this is
 the chapter that carries the leadership proof, which is the one case the tier 2 template allows it.
@@ -97,10 +97,10 @@ the chapter that carries the leadership proof, which is the one case the tier 2 
 The chapter SHALL render two `single` artifact slots from the assets under
 `src/assets/portfolio/case-studies/whitehawk/products/risk-assessment-platform/`:
 
-| # | Block       | File                                     | Shows                                                                                                                       |
-| - | ----------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| 1 | Specimen    | `product-risk-assessment-platform_1.png` | The Technology (TC) section in one frame: stepper, weight badge, 6/7 answered, seven questions, two contributors, TC.7 open |
-| 2 | Field Guide | `product-risk-assessment-platform_2.png` | The dashboard: questions answered, sections complete, five per-section progress bars                                        |
+| #   | Block       | File                                     | Shows                                                                                                                       |
+| --- | ----------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Specimen    | `product-risk-assessment-platform_1.png` | The Technology (TC) section in one frame: stepper, weight badge, 6/7 answered, seven questions, two contributors, TC.7 open |
+| 2   | Field Guide | `product-risk-assessment-platform_2.png` | The dashboard: questions answered, sections complete, five per-section progress bars                                        |
 
 Artifact 1 SHALL sit inside the Specimen block after its prose. Artifact 2 SHALL sit inside the
 Field Guide block. Provenance and Later Observations SHALL carry no artifact.
