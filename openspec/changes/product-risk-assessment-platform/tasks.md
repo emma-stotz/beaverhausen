@@ -29,9 +29,9 @@
 
 ## 3. Page and route
 
-- [ ] 3.1 Create `src/pages/portfolio/whitehawk/risk-assessment-platform/index.tsx` composing
+- [x] 3.1 Create `src/pages/portfolio/whitehawk/risk-assessment-platform/index.tsx` composing
       `CaseStudyLayout` and `ProductChapter` with `RISK_ASSESSMENT_PLATFORM`, holding no logic
-- [ ] 3.2 In `src/App.tsx`, swap the `client-a` import and route entry for
+- [x] 3.2 In `src/App.tsx`, swap the `client-a` import and route entry for
       `/portfolio/whitehawk/risk-assessment-platform`
 - [ ] 3.3 Delete `src/pages/portfolio/whitehawk/client-a/index.tsx` and its directory, now that
       nothing imports it
