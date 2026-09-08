@@ -1,7 +1,7 @@
 ## 1. Chapter content
 
 - [x] 1.1 Rewrite `src/content/product-compliance-frameworks.ts` as a typed `COMPLIANCE_FRAMEWORKS:
-      ProductChapter`, following the two shipped chapters. Title "Compliance Frameworks", subtitle
+    ProductChapter`, following the two shipped chapters. Title "Compliance Frameworks", subtitle
       "Shared Language, Different Rules", the three masthead entries, and three blocks (Field Guide,
       Divergence, Later Observations) plus the field note, copied verbatim from the draft comments.
       Drop the trailing "Artifacts" table and "Captions" list, and the alternate heading "Structure

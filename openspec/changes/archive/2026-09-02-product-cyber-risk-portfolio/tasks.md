@@ -1,7 +1,7 @@
 ## 1. Chapter content
 
 - [x] 1.1 Rewrite `src/content/product-cyber-risk-portfolio.ts` as a typed `CYBER_RISK_PORTFOLIO:
-      ProductChapter`, following `src/content/product-cyber-risk-rating.ts`. Title "Cyber Risk
+    ProductChapter`, following `src/content/product-cyber-risk-rating.ts`. Title "Cyber Risk
       Portfolio", subtitle "Where Risk Concentrates", the three masthead entries, and three blocks
       (Field Guide, Divergence, Later Observations) plus the field note, copied verbatim from the
       draft comments. Drop the trailing "Artifact plan" and "Captions" sections; they are author

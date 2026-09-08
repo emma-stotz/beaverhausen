@@ -20,11 +20,11 @@ The flipbook's field-note register carries down into the product chapters.
 | **Later Observations** | What shipped, and what you would change                     |
 | **Field note**         | The closing aside, matching the flipbook                    |
 
-Tier 2 uses three: **Specimen**, **Field Guide**, **Later Observations**.
+Tier 2 uses three: **Specimen**, **Field Guide**, **Later Observations**. It adds **Provenance** in the one chapter that carries the leadership proof.
 
 **Field Guide means the same thing everywhere:** the reusable method, whatever in this chapter would transfer to another company's codebase. In Cyber Risk Rating that is the translation rules; in Portfolio it will be the component architecture and tokens; in a tier 2 exploration it is the form architecture or the IA. The name holds because the job holds.
 
-Since tier 2 drops Provenance, its Specimen block absorbs one sentence of ownership.
+Where tier 2 drops Provenance, its Specimen block absorbs one sentence of ownership. Where it keeps Provenance, Specimen stays about the product and the ownership sentence is unnecessary.
 
 Six quiet nouns is the ceiling.
 
@@ -110,15 +110,17 @@ Second: the honest revision note. Your flipbook already does this well in Chapte
 
 ## Short template (tier 2)
 
-250 to 350 words. Three blocks, one or two artifacts. Visually distinct from tier 1 so a reader knows immediately it is a different weight: no hero container, single column, smaller title.
+250 to 350 words, or up to 450 in the chapter that carries Provenance. Three blocks, four with Provenance, one or two artifacts. Visually distinct from tier 1 so a reader knows immediately it is a different weight: no hero container, no masthead, single column. The type scale stays the same as tier 1, since the missing masthead and the shorter page already read as lighter weight and a second scale would rank a tier 2 block heading below a tier 1 masthead subhead that carries less content.
 
 **Block A: Specimen** 60 to 80 words. The problem, the client by domain only, and the one thing that made it hard. Close with the one-clause status line from the framing rule above.
 
+**Block A2: Provenance** One chapter only, and only for the leadership proof. 100 to 140 words. Same job as tier 1 Provenance, so see that block. It sits second, between Specimen and Field guide, so the reader has the product before the delivery story.
+
 **Block B: Field guide** 120 to 160 words. One design or architecture problem, worked through properly. For the 42-question assessment that is form architecture: conditional branching, save and resume, validation timing, progress that stays honest when the path length varies. For the TPRM platform it is information architecture and how you made a sprawling scope decidable.
 
-**Artifact:** one, legible, captioned. A flow, a state model, or a form architecture diagram. Not a screenshot of a client's branded UI.
+**Artifact:** one or two, legible, captioned. A flow, a state model, a form architecture diagram, or a screen rebuilt with the client's marks and identifying details removed. Never a screenshot of a client's branded UI as it shipped.
 
-**Block C: Later observations** 60 to 80 words. What the reasoning was good for regardless of the outcome. No survivor claim, since nothing carried forward. Say what you would build differently now, which is true and costs nothing.
+**Block C: Later observations** 60 to 80 words. What the reasoning was good for regardless of the outcome. No survivor claim about the product, since it did not ship; a claim about what the method survived into is fair and is different. Say what you would build differently now, which is true and costs nothing.
 
 ---
 
@@ -147,9 +149,9 @@ Across the three tier 1 chapters, at least one should show each of these.
 
 ## Leadership proof
 
-Concentrated in Cyber Risk Portfolio. The claim to make there is a standard you set that other people built against and that held after you stopped touching it: the component rules that let a second and third surface get built without you, or the decisions a new engineer inherited rather than relitigated.
+Concentrated in Risk Assessment Platform, in a Provenance block. The claim to make there is a standard you set that other people built against and that held after you stopped touching it: the boundaries that became lint errors so the rules held without anyone remembering them, and the frontend you started next that was built against them. The delivery estimate belongs in the same block, since scoping a four-person team across three repositories and writing down the tradeoffs is the part that reads as leadership rather than as seniority.
 
-Keep it to one chapter. Two-plus years of leadership presented across five chapters invites the reader to do the math; presented in one, it reads as range.
+Keep it to one chapter. Two-plus years of leadership presented across five chapters invites the reader to do the math; presented in one, it reads as range. It landing in a tier 2 chapter rather than a tier 1 one is fine: that is where the evidence actually is, and the tier 1 chapters are carrying the design engineering weighting.
 
 ---
 
@@ -159,18 +161,18 @@ Two tiers. The shipped products with numbers get the full template; the unshippe
 
 ### Tier 1: full chapters (450 to 600 words, four to six artifacts)
 
-| #   | Product                                 | Role in the portfolio                                                                                                                                                                                         | Numbers | Stub to replace |
-| --- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------------- |
-| 1   | Cyber Risk Rating                       | **Craft chapter.** Single-company risk report: data density, information hierarchy, score legibility, states for incomplete data. Home for the states matrix and component API.                               | Yes     | platform        |
-| 2   | Cyber Risk Portfolio                    | **System chapter, and the leadership chapter.** One report's language scaled to many companies. Proof that tokens and components transfer across surfaces, and that you set rules other people built against. | Yes     | engage          |
-| 3   | Maturity Roadmap (CMMC and Essential 8) | **Constraint chapter.** Two compliance standards through one component set. What generalized, what refused to, where you special-cased.                                                                       | Yes     | comply          |
+| #   | Product                                 | Role in the portfolio                                                                                                                                                           | Numbers | Stub to replace |
+| --- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------------- |
+| 1   | Cyber Risk Rating                       | **Craft chapter.** Single-company risk report: data density, information hierarchy, score legibility, states for incomplete data. Home for the states matrix and component API. | Yes     | platform        |
+| 2   | Cyber Risk Portfolio                    | **System chapter.** One report's language scaled to many companies. Proof that tokens and components transfer across surfaces.                                                  | Yes     | engage          |
+| 3   | Maturity Roadmap (CMMC and Essential 8) | **Constraint chapter.** Two compliance standards through one component set. What generalized, what refused to, where you special-cased.                                         | Yes     | comply          |
 
-### Tier 2: short explorations (250 to 350 words, one or two artifacts)
+### Tier 2: short explorations (250 to 350 words, one or two artifacts; up to 450 with Provenance)
 
-| #   | Product                              | Role in the portfolio                                                                                                           | Notes                                       | Stud to replace |
-| --- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | --------------- |
-| 4   | 42-question risk assessment          | Form architecture: conditional logic, progress, save and resume, validation. Strong design engineering material even unshipped. | External client, do not name. Did not ship. | client-a        |
-| 5   | Third-party risk management platform | IA and systems problem. Carries the scope-and-stakeholder signal. A year into development, so there is real depth to show.      | External client, do not name. Did not ship. | client-b        |
+| #   | Product                              | Role in the portfolio                                                                                                                                                           | Notes                                       | Stub to replace |
+| --- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | --------------- |
+| 4   | 42-question risk assessment          | **The leadership chapter.** Form architecture: section grouping, autosave, contributor handoff, progress that stays honest. Carries the leadership proof in a Provenance block. | External client, do not name. Did not ship. | client-a        |
+| 5   | Third-party risk management platform | IA and systems problem. Carries the scope-and-stakeholder signal. A year into development, so there is real depth to show.                                                      | External client, do not name. Did not ship. | client-b        |
 
 **Naming rule for tier 2:** describe the client by domain, not identity. "An enterprise client in [sector]" or just "a client engagement." No logo, no colors that identify them, no screenshots with their marks. Details that effectively identify the client (company-scale layoffs, recognizable product surfaces) are naming by another route; leave them out.
 

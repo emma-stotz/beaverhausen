@@ -21,7 +21,7 @@ function MastheadEntry({ heading, text }: { heading: string; text: string }) {
 export function ChapterMasthead({
   masthead,
 }: {
-  masthead: ProductChapter['masthead']
+  masthead: NonNullable<ProductChapter['masthead']>
 }) {
   const copy = (
     <div className="mx-auto flex max-w-3xl flex-col space-y-6">

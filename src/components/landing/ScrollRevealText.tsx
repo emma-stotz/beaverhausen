@@ -2,8 +2,9 @@ import type { ReactNode } from 'react'
 
 import '@/components/landing/scroll-reveal.css'
 
-import { BaseT3 } from '@/components/primitives/BaseT3'
 import type { LineProps } from '@/util/scrollSections'
+
+import { BaseT3 } from '@/components/primitives/BaseT3'
 
 type Props = {
   lines: Array<string>

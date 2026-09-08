@@ -1,6 +1,6 @@
 import { CaseStudyNav } from '@/components/portfolio/case-studies/CaseStudyNav'
-import { WhiteHawkCaseStudy } from '@/components/portfolio/case-studies/whitehawk/WhiteHawkCaseStudy'
 import { WhiteHawkProducts } from '@/components/portfolio/case-studies/whitehawk/products/WhiteHawkProducts'
+import { WhiteHawkCaseStudy } from '@/components/portfolio/case-studies/whitehawk/WhiteHawkCaseStudy'
 import { BaseT6 } from '@/components/primitives/BaseT6'
 import { CaseStudyLayout } from '@/layouts/CaseStudyLayout'
 

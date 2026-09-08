@@ -1,11 +1,4 @@
-# whitehawk-product-stub-pages Specification
-
-## Purpose
-
-Provides resolvable, placeholder pages for the WhiteHawk product routes whose chapters have not been
-written yet, so links from the products section have a real destination.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Five stub routes exist under `/portfolio/whitehawk/`
 

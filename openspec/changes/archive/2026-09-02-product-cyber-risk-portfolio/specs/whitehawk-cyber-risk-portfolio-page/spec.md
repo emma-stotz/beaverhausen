@@ -43,13 +43,13 @@ Divergence, Later Observations), and the closing field note.
 The chapter SHALL render five artifact slots across six image files, using the assets under
 `src/assets/portfolio/case-studies/whitehawk/products/cyber-risk-portfolio/`:
 
-| # | Block              | Kind   | File(s)                                                                        |
-| - | ------------------ | ------ | ------------------------------------------------------------------------------ |
-| 1 | Masthead hero      | single | `portfolio_report-exec_overview.png`                                           |
-| 2 | Field Guide        | pair   | `cyber_risk_rating-component_lib.png` then `portfolio_report-component_lib.png` |
-| 3 | Field Guide        | single | `portfolio_report-compliance_overview.png`                                     |
-| 4 | Divergence         | single | `admin_portfolio-report_supplier-select-visible.png`                            |
-| 5 | Later Observations | single | `portfolio_report-fin_impact_overview.png`                                     |
+| #   | Block              | Kind   | File(s)                                                                         |
+| --- | ------------------ | ------ | ------------------------------------------------------------------------------- |
+| 1   | Masthead hero      | single | `portfolio_report-exec_overview.png`                                            |
+| 2   | Field Guide        | pair   | `cyber_risk_rating-component_lib.png` then `portfolio_report-component_lib.png` |
+| 3   | Field Guide        | single | `portfolio_report-compliance_overview.png`                                      |
+| 4   | Divergence         | single | `admin_portfolio-report_supplier-select-visible.png`                            |
+| 5   | Later Observations | single | `portfolio_report-fin_impact_overview.png`                                      |
 
 #### Scenario: Every artifact is present
 
