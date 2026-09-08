@@ -33,7 +33,7 @@
       `CaseStudyLayout` and `ProductChapter` with `RISK_ASSESSMENT_PLATFORM`, holding no logic
 - [x] 3.2 In `src/App.tsx`, swap the `client-a` import and route entry for
       `/portfolio/whitehawk/risk-assessment-platform`
-- [ ] 3.3 Delete `src/pages/portfolio/whitehawk/client-a/index.tsx` and its directory, now that
+- [x] 3.3 Delete `src/pages/portfolio/whitehawk/client-a/index.tsx` and its directory, now that
       nothing imports it
 
 ## 4. Products grid
