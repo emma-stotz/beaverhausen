@@ -12,8 +12,9 @@ case study nav repositioned beneath it.
 
 The WhiteHawk page SHALL render a products section below the flipbook (`WhiteHawkCaseStudy`) and
 above `CaseStudyNav`. The section SHALL display exactly five product entries sourced from `PRODUCTS`
-in `src/content/products.ts`. The first three SHALL be named `Cyber Risk Rating`,
-`Cyber Risk Portfolio`, and `Compliance Frameworks`.
+in `src/content/products.ts`. The first four SHALL be named `Cyber Risk Rating`,
+`Cyber Risk Portfolio`, `Compliance Frameworks`, and `Risk Assessment Platform`. Only the fifth
+entry SHALL remain an unnamed placeholder.
 
 #### Scenario: Products section is present in document flow
 
@@ -26,11 +27,17 @@ in `src/content/products.ts`. The first three SHALL be named `Cyber Risk Rating`
 - **THEN** each of the five entries shows the product name and a thumbnail area (image or
   placeholder rectangle)
 
+#### Scenario: The fourth entry is a named product
+
+- **WHEN** a visitor reads the products grid
+- **THEN** the fourth entry reads `Risk Assessment Platform`, and `Client A` does not appear
+
 ### Requirement: Product entries link to individual product pages
 
 Each product entry SHALL link to `/portfolio/whitehawk/<id>` via `TransitionLink` (or `AppLink`)
-so the water-fill transition fires on navigation. The first three entries' `id` values SHALL be
-`cyber-risk-rating`, `cyber-risk-portfolio`, and `compliance-frameworks`.
+so the water-fill transition fires on navigation. The first four entries' `id` values SHALL be
+`cyber-risk-rating`, `cyber-risk-portfolio`, `compliance-frameworks`, and
+`risk-assessment-platform`. No entry SHALL carry the id `client-a`.
 
 #### Scenario: Clicking a product entry navigates with transition
 
@@ -53,6 +60,11 @@ so the water-fill transition fires on navigation. The first three entries' `id` 
 - **WHEN** a visitor clicks the Compliance Frameworks entry
 - **THEN** they are taken to `/portfolio/whitehawk/compliance-frameworks`
 
+#### Scenario: Risk Assessment Platform entry targets its chapter
+
+- **WHEN** a visitor clicks the Risk Assessment Platform entry
+- **THEN** they are taken to `/portfolio/whitehawk/risk-assessment-platform`
+
 #### Scenario: Middle-click or right-click opens the URL directly
 
 - **WHEN** a visitor middle-clicks or right-clicks a product entry
@@ -62,9 +74,10 @@ so the water-fill transition fires on navigation. The first three entries' `id` 
 ### Requirement: Thumbnail placeholder is trivially swappable
 
 A product entry with `thumbnail: null` SHALL render a styled placeholder rectangle. Setting
-`thumbnail` to a non-null imported asset SHALL render that image with identical dimensions. The three
+`thumbnail` to a non-null imported asset SHALL render that image with identical dimensions. The four
 shipped chapters SHALL use `cyber-risk-scorecard_thumbnail.png`, `portfolio_report-thumbnail.png`,
-and `frameworks_thumbnail.png`; the remaining two entries stay `null` until their chapters ship.
+`frameworks_thumbnail.png`, and `product-risk-assessment-platform_thumbnail.png`; the remaining
+entry stays `null` until its chapter ships.
 
 #### Scenario: Null thumbnail renders a placeholder
 
@@ -79,7 +92,7 @@ and `frameworks_thumbnail.png`; the remaining two entries stay `null` until thei
 #### Scenario: Shipped chapters show their real thumbnails
 
 - **WHEN** a visitor loads `/portfolio/whitehawk`
-- **THEN** the first three entries show their own thumbnails and the remaining two show placeholders,
+- **THEN** the first four entries show their own thumbnails and the fifth shows a placeholder,
   all at the same size
 
 ### Requirement: Product data lives in its own content module
