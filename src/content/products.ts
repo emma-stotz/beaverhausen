@@ -71,7 +71,10 @@ export interface ChapterBlock {
 export interface ProductChapter {
   title: string
   subtitle?: string
-  masthead: {
+  // Tier 1 only. A chapter that omits it is tier 2: its blocks start under the
+  // title, with no hero and no Specimen/Hypothesis/Provenance triple. A tier 2
+  // chapter that needs a Specimen or Provenance section writes it as a block.
+  masthead?: {
     specimen: string
     hypothesis: string
     provenance: string

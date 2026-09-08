@@ -1,12 +1,12 @@
 ## 1. Make the masthead optional
 
-- [ ] 1.1 In `src/content/products.ts`, change `masthead` on `ProductChapter` to optional and comment
+- [x] 1.1 In `src/content/products.ts`, change `masthead` on `ProductChapter` to optional and comment
       it as tier 1 only, with a chapter that omits it being tier 2
-- [ ] 1.2 In `src/components/portfolio/products/ChapterMasthead.tsx`, change the prop type to
+- [x] 1.2 In `src/components/portfolio/products/ChapterMasthead.tsx`, change the prop type to
       `NonNullable<ProductChapter['masthead']>`
-- [ ] 1.3 In `src/components/portfolio/products/ProductChapter.tsx`, guard the masthead render with
+- [x] 1.3 In `src/components/portfolio/products/ProductChapter.tsx`, guard the masthead render with
       `{chapter.masthead && ...}`
-- [ ] 1.4 Run `pnpm run check` and confirm the three tier 1 content modules still type check
+- [x] 1.4 Run `pnpm run check` and confirm the three tier 1 content modules still type check
       unchanged
 
 ## 2. Content module
