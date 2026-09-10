@@ -47,12 +47,15 @@ export function ChapterArtifactToggle({
     if (pointerType === 'mouse') setHovering(true)
   }
 
-  // No background, border, or radius of its own: the undecorated frame rule is
-  // why these screenshots read as evidence. The focus ring is the one visual it
-  // contributes, and it deliberately carries no `outline-none` base: that sets
-  // outline-style: none, which the focus-visible width utility does not restore,
-  // so the ring would never paint. Chrome only rings :focus-visible anyway, so a
-  // mouse click still leaves none.
+  // No background or border of its own: the undecorated frame rule is why these
+  // screenshots read as evidence. The focus ring is the one visual it
+  // contributes. `rounded-xl` is there only to shape that ring, since an outline
+  // follows border-radius; with nothing painted behind it the radius is
+  // otherwise invisible.
+  //
+  // Deliberately no `outline-none` base: that sets outline-style: none, which
+  // the focus-visible width utility does not restore, so the ring would never
+  // paint. Chrome only rings :focus-visible, so a mouse click still leaves none.
   return (
     <button
       type="button"
@@ -61,7 +64,7 @@ export function ChapterArtifactToggle({
       onClick={() => setLatched((held) => !held)}
       onPointerEnter={(e) => previewOn(e.pointerType)}
       onPointerLeave={() => setHovering(false)}
-      className="block w-full cursor-pointer bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-iron-orange"
+      className="block w-full cursor-pointer rounded-xl bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-iron-orange"
     >
       <span className="grid">
         <Layer artifact={rest} visible={!showActive} />
