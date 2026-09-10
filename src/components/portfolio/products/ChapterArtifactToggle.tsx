@@ -4,13 +4,19 @@ import type { Artifact } from '@/content/products'
 
 // One layer of the stack. Both layers sit in the same grid cell, so the frame
 // reserves the taller of the two and toggling cannot reflow the page.
-function Layer({ artifact, visible }: { artifact: Artifact; visible: boolean }) {
+function Layer({
+  artifact,
+  visible,
+}: {
+  artifact: Artifact
+  visible: boolean
+}) {
   return (
     <img
       src={artifact.src}
       alt={artifact.alt}
       aria-hidden={!visible}
-      className={`pointer-events-none col-start-1 row-start-1 w-full object-contain transition-opacity duration-[var(--duration-interaction)] ease-[var(--ease-out-cubic)] motion-reduce:transition-none ${visible ? 'opacity-100' : 'opacity-0'}`}
+      className={`pointer-events-none col-start-1 row-start-1 w-full object-contain transition-opacity duration-(--duration-interaction) ease-out-cubic motion-reduce:transition-none ${visible ? 'opacity-100' : 'opacity-0'}`}
     />
   )
 }
@@ -43,7 +49,10 @@ export function ChapterArtifactToggle({
 
   // No background, border, or radius of its own: the undecorated frame rule is
   // why these screenshots read as evidence. The focus ring is the one visual it
-  // contributes.
+  // contributes, and it deliberately carries no `outline-none` base: that sets
+  // outline-style: none, which the focus-visible width utility does not restore,
+  // so the ring would never paint. Chrome only rings :focus-visible anyway, so a
+  // mouse click still leaves none.
   return (
     <button
       type="button"
@@ -52,7 +61,7 @@ export function ChapterArtifactToggle({
       onClick={() => setLatched((held) => !held)}
       onPointerEnter={(e) => previewOn(e.pointerType)}
       onPointerLeave={() => setHovering(false)}
-      className="block w-full cursor-pointer bg-transparent outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-iron-orange"
+      className="block w-full cursor-pointer bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-iron-orange"
     >
       <span className="grid">
         <Layer artifact={rest} visible={!showActive} />
