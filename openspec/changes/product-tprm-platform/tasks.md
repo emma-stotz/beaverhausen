@@ -25,23 +25,23 @@
 
 ## 3. Content module
 
-- [ ] 3.1 In `src/content/product-tprm-platform.ts`, replace the commented draft with an exported
+- [x] 3.1 In `src/content/product-tprm-platform.ts`, replace the commented draft with an exported
       `TPRM_PLATFORM: ProductChapter`, importing all three chapter assets through `@/`
-- [ ] 3.2 Set the title to Third Party Risk Management Platform and the subtitle to History Depends
+- [x] 3.2 Set the title to Third Party Risk Management Platform and the subtitle to History Depends
       on Identity, and omit `masthead`
-- [ ] 3.3 Add the three blocks in order: Specimen, Field Guide, Later Observations, with the drafted
+- [x] 3.3 Add the three blocks in order: Specimen, Field Guide, Later Observations, with the drafted
       prose transferred verbatim including the "dissolved its third-party risk management team" clause
-- [ ] 3.4 Add artifact 1 (`tprm_1.png`) as a `single` slot at `xl` inside the Specimen block, after
+- [x] 3.4 Add artifact 1 (`tprm_1.png`) as a `single` slot at `xl` inside the Specimen block, after
       its prose, carrying caption 1
-- [ ] 3.5 Add artifact 2 as a `toggle` slot at `xl` inside the Field Guide block, with
+- [x] 3.5 Add artifact 2 as a `toggle` slot at `xl` inside the Field Guide block, with
       `tprm_2_rest.png` as rest and `tprm_2_hovered.png` as active, carrying caption 2
-- [ ] 3.6 Write the toggle's `label` so it names the action and the Overall Grade series, not the
+- [x] 3.6 Write the toggle's `label` so it names the action and the Overall Grade series, not the
       chart's appearance
-- [ ] 3.7 Write alt text for all three images describing interface elements, counts, and states only,
+- [x] 3.7 Write alt text for all three images describing interface elements, counts, and states only,
       naming no client, vendor, or ratings provider
-- [ ] 3.8 Set `fieldNote` from the drafted field note with the `**Field note**:` prefix and its
+- [x] 3.8 Set `fieldNote` from the drafted field note with the `**Field note**:` prefix and its
       trailing space stripped
-- [ ] 3.9 Confirm no commented copy, no artifact plan table, and no em dashes remain in the file
+- [x] 3.9 Confirm no commented copy, no artifact plan table, and no em dashes remain in the file
 
 ## 4. Page and route
 
