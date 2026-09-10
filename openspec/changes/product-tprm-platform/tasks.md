@@ -49,7 +49,7 @@
       and `ProductChapter` with `TPRM_PLATFORM`, holding no logic
 - [x] 4.2 In `src/App.tsx`, swap the `client-b` import and route entry for
       `/portfolio/whitehawk/tprm-platform`
-- [ ] 4.3 Delete `src/pages/portfolio/whitehawk/client-b/index.tsx` and its directory, now that
+- [x] 4.3 Delete `src/pages/portfolio/whitehawk/client-b/index.tsx` and its directory, now that
       nothing imports it
 
 ## 5. Products grid
