@@ -54,10 +54,10 @@
 
 ## 5. Products grid
 
-- [ ] 5.1 In `src/content/products.ts`, import `tprm_thumbnail.png` and replace the `client-b` entry
+- [x] 5.1 In `src/content/products.ts`, import `tprm_thumbnail.png` and replace the `client-b` entry
       with `{ id: 'tprm-platform', name: 'Third Party Risk Management Platform', thumbnail: ... }`,
       keeping it fifth
-- [ ] 5.2 Confirm no entry has `thumbnail: null` and the `null` branch in `WhiteHawkProducts` is left
+- [x] 5.2 Confirm no entry has `thumbnail: null` and the `null` branch in `WhiteHawkProducts` is left
       in place as the documented fallback
 - [ ] 5.3 Check the grid at `lg` and below: the longest name now has four words and must not break
       the five-column layout
