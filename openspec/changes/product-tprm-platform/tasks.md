@@ -59,30 +59,30 @@
       keeping it fifth
 - [x] 5.2 Confirm no entry has `thumbnail: null` and the `null` branch in `WhiteHawkProducts` is left
       in place as the documented fallback
-- [ ] 5.3 Check the grid at `lg` and below: the longest name now has four words and must not break
+- [x] 5.3 Check the grid at `lg` and below: the longest name now has four words and must not break
       the five-column layout
 
 ## 6. Verify
 
-- [ ] 6.1 Run `pnpm run format` scoped to the files touched, then `pnpm run lint --fix`, then
+- [x] 6.1 Run `pnpm run format` scoped to the files touched, then `pnpm run lint --fix`, then
       `pnpm run build`
-- [ ] 6.2 In the browser, load `/portfolio/whitehawk/tprm-platform` and confirm block order, no
+- [x] 6.2 In the browser, load `/portfolio/whitehawk/tprm-platform` and confirm block order, no
       masthead, and both artifacts with captions
-- [ ] 6.3 Toggle artifact 2 with the mouse: hover previews, pointer-out returns to rest, click
+- [x] 6.3 Toggle artifact 2 with the mouse: hover previews, pointer-out returns to rest, click
       latches, hovering a latched toggle does not unlatch it, second click unlatches
-- [ ] 6.4 Toggle artifact 2 with the keyboard: Tab reaches it with a visible `iron-orange` ring,
+- [x] 6.4 Toggle artifact 2 with the keyboard: Tab reaches it with a visible `iron-orange` ring,
       Enter and Space both switch state, and a mouse click leaves no ring
-- [ ] 6.5 Confirm `aria-pressed` tracks the latch and not hover, and that only the visible layer is
+- [x] 6.5 Confirm `aria-pressed` tracks the latch and not hover, and that only the visible layer is
       exposed to the accessibility tree
-- [ ] 6.6 Emulate a touch device with no hover and confirm tap latches and untaps
-- [ ] 6.7 Confirm the frame height does not change on toggle, so nothing below it moves
-- [ ] 6.8 Confirm the swap is instant under `prefers-reduced-motion: reduce`
-- [ ] 6.9 Judge whether the chart at `xl` reads as large or as blurry, and whether the hover preview
+- [x] 6.6 Emulate a touch device with no hover and confirm tap latches and untaps
+- [x] 6.7 Confirm the frame height does not change on toggle, so nothing below it moves
+- [x] 6.8 Confirm the swap is instant under `prefers-reduced-motion: reduce`
+- [x] 6.9 Judge whether the chart at `xl` reads as large or as blurry, and whether the hover preview
       reads as a preview or a flicker; report both rather than silently changing the spec
-- [ ] 6.10 Check the page at 320px, tablet, and desktop for horizontal page scroll
-- [ ] 6.11 Check the chapter in dark mode: headings `iron-orange`, body `enamel`, captions `cream`
-- [ ] 6.12 Confirm `/portfolio/whitehawk/client-b` renders the not-found page and does not redirect,
+- [x] 6.10 Check the page at 320px, tablet, and desktop for horizontal page scroll
+- [x] 6.11 Check the chapter in dark mode: headings `iron-orange`, body `enamel`, captions `cream`
+- [x] 6.12 Confirm `/portfolio/whitehawk/client-b` renders the not-found page and does not redirect,
       and that the four earlier retired slugs still do the same
-- [ ] 6.13 Confirm the products grid shows all five named with thumbnails and no placeholder, and
+- [x] 6.13 Confirm the products grid shows all five named with thumbnails and no placeholder, and
       that the fifth entry's water transition reaches the chapter
-- [ ] 6.14 Confirm the four earlier chapters render unchanged, mastheads and artifacts intact
+- [x] 6.14 Confirm the four earlier chapters render unchanged, mastheads and artifacts intact
