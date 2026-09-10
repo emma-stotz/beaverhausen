@@ -65,6 +65,20 @@ export type ArtifactSlot =
       // to read at half width.
       stacked?: boolean
     }
+  // Two states of one screen, stacked in one frame. Hover previews `active`;
+  // click, Enter, or Space latches it. For a screen whose point is the state
+  // change: showing one state loses the argument, showing both side by side
+  // turns it into a comparison. Use `pair` for two different screens.
+  | {
+      kind: 'toggle'
+      rest: Artifact
+      active: Artifact
+      caption: string
+      width?: ArtifactWidth
+      // The button's accessible name. Says what pressing does, not what either
+      // image looks like. Required so a control cannot ship unnamed.
+      label: string
+    }
 
 export type BlockContent = { kind: 'prose'; text: string } | ArtifactSlot
 

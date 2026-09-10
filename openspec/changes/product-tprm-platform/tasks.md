@@ -1,27 +1,27 @@
 ## 1. The toggle slot kind
 
-- [ ] 1.1 In `src/content/products.ts`, add the `toggle` variant to `ArtifactSlot` with `rest`,
+- [x] 1.1 In `src/content/products.ts`, add the `toggle` variant to `ArtifactSlot` with `rest`,
       `active`, `label`, `caption`, and optional `width`, commented as two states of one screen
-- [ ] 1.2 Run `pnpm run check` and confirm the four shipped content modules still type check, and
+- [x] 1.2 Run `pnpm run check` and confirm the four shipped content modules still type check, and
       that `ChapterArtifact` now fails exhaustiveness or falls through, whichever the code shape gives
 
 ## 2. The toggle component
 
-- [ ] 2.1 Create `src/components/portfolio/products/ChapterArtifactToggle.tsx`: a button of type
+- [x] 2.1 Create `src/components/portfolio/products/ChapterArtifactToggle.tsx`: a button of type
       button wrapping two absolutely stacked frames, with visible state `latched || hovering`
-- [ ] 2.2 Wire hover to preview only (`onPointerEnter`/`onPointerLeave`) and click plus Enter plus
+- [x] 2.2 Wire hover to preview only (`onPointerEnter`/`onPointerLeave`) and click plus Enter plus
       Space to latch, letting the native button supply the keyboard half
-- [ ] 2.3 Set `aria-pressed` from the latch alone, never from hover; give the button its accessible
+- [x] 2.3 Set `aria-pressed` from the latch alone, never from hover; give the button its accessible
       name from `label`
-- [ ] 2.4 Keep non-empty `alt` on both layers and set `aria-hidden` on whichever layer is not visible
-- [ ] 2.5 Reset the button's default chrome to nothing; add only a `focus-visible` ring in
+- [x] 2.4 Keep non-empty `alt` on both layers and set `aria-hidden` on whichever layer is not visible
+- [x] 2.5 Reset the button's default chrome to nothing; add only a `focus-visible` ring in
       `iron-orange`
-- [ ] 2.6 Reserve the frame height so the swap cannot reflow the page, and cross-fade with the
+- [x] 2.6 Reserve the frame height so the swap cannot reflow the page, and cross-fade with the
       `--duration-interaction` and `--ease-out-cubic` tokens
-- [ ] 2.7 Zero the transition under `prefers-reduced-motion: reduce`
-- [ ] 2.8 Dispatch `kind === 'toggle'` to the new component from
+- [x] 2.7 Zero the transition under `prefers-reduced-motion: reduce`
+- [x] 2.8 Dispatch `kind === 'toggle'` to the new component from
       `src/components/portfolio/products/ChapterArtifact.tsx`, leaving `single` and `pair` untouched
-- [ ] 2.9 Run `pnpm run check` and `pnpm run lint`
+- [x] 2.9 Run `pnpm run check` and `pnpm run lint`
 
 ## 3. Content module
 

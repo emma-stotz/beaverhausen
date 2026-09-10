@@ -1,5 +1,6 @@
 import type { Artifact, ArtifactSlot, ArtifactWidth } from '@/content/products'
 
+import { ChapterArtifactToggle } from '@/components/portfolio/products/ChapterArtifactToggle'
 import { BaseT6 } from '@/components/primitives/BaseT6'
 
 // Prose is capped at max-w-3xl. Artifacts are not: they break out past the text column.
@@ -29,6 +30,12 @@ export function ChapterArtifact({ slot }: { slot: ArtifactSlot }) {
     <figure className={`mx-auto w-full sm:px-4 md:px-8 lg:px-4 ${width}`}>
       {slot.kind === 'single' ? (
         <Frame artifact={slot.artifact} />
+      ) : slot.kind === 'toggle' ? (
+        <ChapterArtifactToggle
+          rest={slot.rest}
+          active={slot.active}
+          label={slot.label}
+        />
       ) : (
         <div
           className={`grid items-start gap-4 ${slot.stacked ? '' : 'md:grid-cols-2'}`}

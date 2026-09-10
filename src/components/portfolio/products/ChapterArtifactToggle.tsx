@@ -1,0 +1,63 @@
+import { useState } from 'react'
+
+import type { Artifact } from '@/content/products'
+
+// One layer of the stack. Both layers sit in the same grid cell, so the frame
+// reserves the taller of the two and toggling cannot reflow the page.
+function Layer({ artifact, visible }: { artifact: Artifact; visible: boolean }) {
+  return (
+    <img
+      src={artifact.src}
+      alt={artifact.alt}
+      aria-hidden={!visible}
+      className={`pointer-events-none col-start-1 row-start-1 w-full object-contain transition-opacity duration-[var(--duration-interaction)] ease-[var(--ease-out-cubic)] motion-reduce:transition-none ${visible ? 'opacity-100' : 'opacity-0'}`}
+    />
+  )
+}
+
+// Two states of one screen. Hover previews `active`; click, Enter, or Space
+// latches it. `aria-pressed` tracks the latch alone: hover is presentational,
+// and announcing a pressed state because a pointer crossed the frame would be
+// a lie.
+export function ChapterArtifactToggle({
+  rest,
+  active,
+  label,
+}: {
+  rest: Artifact
+  active: Artifact
+  label: string
+}) {
+  const [latched, setLatched] = useState(false)
+  const [hovering, setHovering] = useState(false)
+
+  // Latch wins over hover-out, so a visitor who clicks to hold the state does
+  // not lose it when the pointer drifts off the frame.
+  const showActive = latched || hovering
+
+  // Touch and pen fire a phantom enter/leave around a tap. Previewing on mouse
+  // only leaves those inputs purely latch-driven, which is the intent.
+  function previewOn(pointerType: string) {
+    if (pointerType === 'mouse') setHovering(true)
+  }
+
+  // No background, border, or radius of its own: the undecorated frame rule is
+  // why these screenshots read as evidence. The focus ring is the one visual it
+  // contributes.
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      aria-pressed={latched}
+      onClick={() => setLatched((held) => !held)}
+      onPointerEnter={(e) => previewOn(e.pointerType)}
+      onPointerLeave={() => setHovering(false)}
+      className="block w-full cursor-pointer bg-transparent outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-iron-orange"
+    >
+      <span className="grid">
+        <Layer artifact={rest} visible={!showActive} />
+        <Layer artifact={active} visible={showActive} />
+      </span>
+    </button>
+  )
+}
