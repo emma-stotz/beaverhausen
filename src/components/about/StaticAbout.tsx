@@ -162,7 +162,7 @@ export function StaticAbout() {
 
           <Button
             variant="ghost"
-            onClick={() => transitionTo('/portfolio/beaverhausen')}
+            onClick={() => transitionTo('/portfolio/whitehawk')}
           >
             View my work
           </Button>
