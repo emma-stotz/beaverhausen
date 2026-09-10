@@ -49,7 +49,7 @@ export function ChapterArtifactToggle({
 
   // No background or border of its own: the undecorated frame rule is why these
   // screenshots read as evidence. The focus ring is the one visual it
-  // contributes. `rounded-xl` is there only to shape that ring, since an outline
+  // contributes. `rounded-2xl` is there only to shape that ring, since an outline
   // follows border-radius; with nothing painted behind it the radius is
   // otherwise invisible.
   //
@@ -64,7 +64,7 @@ export function ChapterArtifactToggle({
       onClick={() => setLatched((held) => !held)}
       onPointerEnter={(e) => previewOn(e.pointerType)}
       onPointerLeave={() => setHovering(false)}
-      className="block w-full cursor-pointer rounded-xl bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-iron-orange"
+      className="block w-full cursor-pointer rounded-2xl bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-iron-orange"
     >
       <span className="grid">
         <Layer artifact={rest} visible={!showActive} />
