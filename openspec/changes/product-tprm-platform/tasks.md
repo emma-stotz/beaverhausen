@@ -45,9 +45,9 @@
 
 ## 4. Page and route
 
-- [ ] 4.1 Create `src/pages/portfolio/whitehawk/tprm-platform/index.tsx` composing `CaseStudyLayout`
+- [x] 4.1 Create `src/pages/portfolio/whitehawk/tprm-platform/index.tsx` composing `CaseStudyLayout`
       and `ProductChapter` with `TPRM_PLATFORM`, holding no logic
-- [ ] 4.2 In `src/App.tsx`, swap the `client-b` import and route entry for
+- [x] 4.2 In `src/App.tsx`, swap the `client-b` import and route entry for
       `/portfolio/whitehawk/tprm-platform`
 - [ ] 4.3 Delete `src/pages/portfolio/whitehawk/client-b/index.tsx` and its directory, now that
       nothing imports it
