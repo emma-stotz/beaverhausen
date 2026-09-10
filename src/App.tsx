@@ -11,11 +11,11 @@ import NotFoundPage from '@/pages/not-found'
 import PortfolioPage from '@/pages/portfolio'
 import BeaverhausenPortfolioPage from '@/pages/portfolio/beaverhausen'
 import WhiteHawkPortfolioPage from '@/pages/portfolio/whitehawk'
-import WhiteHawkClientBPage from '@/pages/portfolio/whitehawk/client-b'
 import WhiteHawkComplianceFrameworksPage from '@/pages/portfolio/whitehawk/compliance-frameworks'
 import WhiteHawkCyberRiskPortfolioPage from '@/pages/portfolio/whitehawk/cyber-risk-portfolio'
 import WhiteHawkCyberRiskRatingPage from '@/pages/portfolio/whitehawk/cyber-risk-rating'
 import WhiteHawkRiskAssessmentPlatformPage from '@/pages/portfolio/whitehawk/risk-assessment-platform'
+import WhiteHawkTprmPlatformPage from '@/pages/portfolio/whitehawk/tprm-platform'
 
 function RootLayout() {
   const { state } = useTransition()
@@ -65,8 +65,8 @@ const router = createBrowserRouter([
         element: <WhiteHawkRiskAssessmentPlatformPage />,
       },
       {
-        path: '/portfolio/whitehawk/client-b',
-        element: <WhiteHawkClientBPage />,
+        path: '/portfolio/whitehawk/tprm-platform',
+        element: <WhiteHawkTprmPlatformPage />,
       },
       { path: '*', element: <NotFoundPage /> },
     ],

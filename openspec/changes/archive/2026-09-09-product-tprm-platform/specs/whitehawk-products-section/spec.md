@@ -1,12 +1,4 @@
-# whitehawk-products-section Specification
-
-## Purpose
-
-Gives visitors to the WhiteHawk case study a discovery surface for the five WhiteHawk-derived
-products below the flipbook, with a scroll cue signaling that content follows the cover and the
-case study nav repositioned beneath it.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Products section renders below the flipbook
 
@@ -87,45 +79,3 @@ non-nullable field for no gain.
 
 - **WHEN** a visitor loads `/portfolio/whitehawk`
 - **THEN** all five entries show a distinct thumbnail image and none shows a placeholder rectangle
-
-### Requirement: Product data lives in its own content module
-
-`Product` and `PRODUCTS` SHALL live in `src/content/products.ts`, not in
-`src/content/case-study-whitehawk.ts`. That module SHALL also hold the product chapter schema, so
-product data and the shape of a product page sit together.
-
-#### Scenario: Consumers import from the products module
-
-- **WHEN** a component needs the product list
-- **THEN** it imports `PRODUCTS` from `@/content/products`
-
-#### Scenario: The case study module no longer exports products
-
-- **WHEN** `src/content/case-study-whitehawk.ts` is inspected
-- **THEN** it exports only flipbook chapters and chapter copy
-
-### Requirement: Scroll cue is visible above the products section
-
-A scroll cue SHALL be rendered between the flipbook and the products section. It SHALL match the
-visual style of the Hero scroll cue: a `BaseT6` "scroll" label above an animated `iron-orange`
-vertical line. It SHALL occupy the DOM position previously held by `CaseStudyNav`.
-
-#### Scenario: Scroll cue is visible on page load
-
-- **WHEN** a visitor loads `/portfolio/whitehawk`
-- **THEN** a "scroll" label and animated line are visible at the bottom of the flipbook area
-
-#### Scenario: Clicking the scroll cue scrolls to the products section
-
-- **WHEN** a visitor clicks the scroll cue button
-- **THEN** the page smooth-scrolls to the products section
-
-### Requirement: CaseStudyNav moves below the products section
-
-`CaseStudyNav` SHALL render after `WhiteHawkProducts` in document order, not between the flipbook
-and the products section.
-
-#### Scenario: Nav is below products
-
-- **WHEN** a visitor loads `/portfolio/whitehawk`
-- **THEN** the prev/next navigation appears below all five product entries

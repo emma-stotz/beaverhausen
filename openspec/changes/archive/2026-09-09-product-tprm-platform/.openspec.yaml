@@ -1,0 +1,6 @@
+schema: spec-driven
+created: 2026-09-10
+# This change retires the whitehawk-product-stub-pages capability: client-b was
+# the last stub, so the spec would describe zero routes. Its one durable rule,
+# retired URLs falling through rather than redirecting, moves to not-found-page.
+retire_capabilities: true
