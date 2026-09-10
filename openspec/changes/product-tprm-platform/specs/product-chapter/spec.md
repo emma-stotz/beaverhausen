@@ -83,11 +83,20 @@ layers SHALL keep non-empty `alt` text, and the layer that is not visible SHALL 
 assistive technology is never offered two competing descriptions of one frame.
 
 The button SHALL show a visible `focus-visible` ring in `iron-orange`, matching every other
-interactive affordance, and SHALL NOT show a ring on mouse click. It SHALL be the only tab stop the
-slot introduces.
+interactive affordance. A click that moves focus to the button SHALL NOT paint a ring, which is what
+`focus-visible` gives for free. A click on a button that already carries the ring, because a visitor
+tabbed to it first, SHALL keep it: focus has not moved, and blinking the ring off would be a worse
+answer than leaving it. The button SHALL be the only tab stop the slot introduces.
 
-The button SHALL add no border, corner radius, shadow, or background of its own. The undecorated
-frame rule still holds: the only visual the button contributes is the focus ring.
+The button SHALL add no border, shadow, or background of its own. It MAY set a corner radius, whose
+only effect is to shape that ring, since an outline follows `border-radius` and nothing is painted
+behind it for a radius to clip. The undecorated frame rule still holds: the only visual the button
+contributes is the focus ring.
+
+The ring cannot be made to hug the artwork inside the frame. These screenshots carry their own
+transparent padding for a baked-in drop shadow, so the button's box is wider than the visible card by
+however much padding that asset happens to have. The radius is therefore chosen to read as
+deliberately rounded rather than to match any one asset's corner.
 
 #### Scenario: Pressed state is announced
 
@@ -102,17 +111,23 @@ frame rule still holds: the only visual the button contributes is the focus ring
 #### Scenario: Keyboard focus is visible
 
 - **WHEN** a visitor tabs to the toggle
-- **THEN** an `iron-orange` focus ring is visible around the frame
+- **THEN** an `iron-orange` focus ring is visible around the frame, with rounded corners
 
-#### Scenario: Clicking shows no focus ring
+#### Scenario: A click that moves focus shows no ring
 
-- **WHEN** a visitor clicks the toggle with a pointer
+- **WHEN** a visitor clicks the toggle with a pointer, without having tabbed to it first
 - **THEN** the state changes and no focus ring appears
+
+#### Scenario: A click keeps a ring the keyboard already earned
+
+- **WHEN** a visitor tabs to the toggle, so the ring is showing, and then clicks it
+- **THEN** the state changes and the ring stays, because focus never moved
 
 #### Scenario: The button adds no chrome
 
 - **WHEN** an unfocused toggle renders
-- **THEN** it looks exactly like a `single` artifact of the same width
+- **THEN** it looks exactly like a `single` artifact of the same width, its corner radius invisible
+  with nothing painted behind it
 
 ## MODIFIED Requirements
 
