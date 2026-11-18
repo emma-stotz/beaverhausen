@@ -24,7 +24,6 @@ dist-ssr
 *.sw?
 
 public/resume.html
-public/resume-brand.html
-public/resume-linkedin.html
+public/resume-*.html
 docs/
 src/components/brand/TypographySystem.tsx
