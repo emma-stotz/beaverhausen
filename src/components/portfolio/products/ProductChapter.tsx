@@ -27,7 +27,7 @@ export function ProductChapter({ chapter }: { chapter: Chapter }) {
 
       <AutoHProvider>
         <div className="mt-12 flex flex-col space-y-16">
-          <ChapterMasthead masthead={chapter.masthead} />
+          {chapter.masthead && <ChapterMasthead masthead={chapter.masthead} />}
 
           {chapter.blocks.map((block) => (
             <ChapterBlock key={block.heading} block={block} />

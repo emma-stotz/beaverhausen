@@ -1,4 +1,5 @@
 import type { TransitionState } from '@/hooks/usePageTransition'
+
 import { createDependency } from '@/util/dependency'
 
 interface TransitionContextValue {

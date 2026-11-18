@@ -18,12 +18,14 @@ It is not a component -- the pattern will be replicated inline in the page.
 ## Goals / Non-Goals
 
 **Goals:**
+
 - Insert products grid and scroll cue with minimal structural churn to the WhiteHawk page
 - Keep the products data in the same content file as chapters, following established conventions
 - Make placeholder thumbnails trivially swappable (a single `src` field per product)
 - Ensure all five product links go through `TransitionLink` for the water-fill transition
 
 **Non-Goals:**
+
 - Individual product page content or layout
 - A reusable products grid primitive
 - Any animation beyond what the Hero scroll cue already does
@@ -34,17 +36,17 @@ It is not a component -- the pattern will be replicated inline in the page.
 
 ```ts
 export interface Product {
-  id: string       // kebab-case slug, used as route segment
-  name: string     // display name -- placeholder until finalised
-  thumbnail: string | null  // import path or null for placeholder
+  id: string // kebab-case slug, used as route segment
+  name: string // display name -- placeholder until finalised
+  thumbnail: string | null // import path or null for placeholder
 }
 
 export const PRODUCTS: Product[] = [
-  { id: 'platform',   name: 'Platform',    thumbnail: null },
-  { id: 'engage',     name: 'Engage',      thumbnail: null },
-  { id: 'comply',     name: 'Comply',      thumbnail: null },
-  { id: 'client-a',  name: 'Client A',    thumbnail: null },  // anonymised
-  { id: 'client-b',  name: 'Client B',    thumbnail: null },  // anonymised
+  { id: 'platform', name: 'Platform', thumbnail: null },
+  { id: 'engage', name: 'Engage', thumbnail: null },
+  { id: 'comply', name: 'Comply', thumbnail: null },
+  { id: 'client-a', name: 'Client A', thumbnail: null }, // anonymised
+  { id: 'client-b', name: 'Client B', thumbnail: null }, // anonymised
 ]
 ```
 
@@ -52,6 +54,7 @@ Follows the `CHAPTERS` / `CHAPTER_COPY` pattern in the same file: a named typed 
 `thumbnail: null` signals "use placeholder" -- swapping to a real asset is one field change.
 
 **Alternatives considered:**
+
 - Separate `src/content/products-whitehawk.ts`: unnecessary split for five items that are
   logically part of the same case study.
 - `thumbnail` as an imported SVG/PNG at the content layer: forces asset imports into content files.
@@ -68,6 +71,7 @@ currently held by `CaseStudyNav`, so it inherits all of `CaseStudyNav`'s spacing
 adjustment.
 
 **Alternatives considered:**
+
 - Inlining the grid in the page: the page would exceed "pages are thin". Five cards with
   placeholder logic warrants extraction.
 - Including the scroll cue in `WhiteHawkProducts`: the cue belongs between flipbook and products,
@@ -101,11 +105,12 @@ Five new routes added to the root `createBrowserRouter` array in `App.tsx` as fl
 A single stub component (`WhiteHawkProductPage`) takes a `name` prop and renders a placeholder.
 
 **Alternatives considered:**
+
 - Nested routes under `/portfolio/whitehawk`: React Router nested routes require a parent route to
   render `<Outlet>`, which would change the existing WhiteHawk page. Flat routes require zero
   changes to the parent.
 - Dynamic route `/portfolio/whitehawk/:product`: avoids listing five routes but requires a lookup
-  + 404 handling for unknown slugs. Overkill for five known pages.
+  - 404 handling for unknown slugs. Overkill for five known pages.
 
 ### Scroll cue: inline `<button>`, Hero pattern
 

@@ -55,12 +55,12 @@ Guide, Divergence, Later Observations), and the closing field note.
 The chapter SHALL render four artifact slots across six image files, using the assets under
 `src/assets/portfolio/case-studies/whitehawk/products/compliance-frameworks/`:
 
-| # | Block         | Kind   | File(s)                                              |
-| - | ------------- | ------ | ---------------------------------------------------- |
-| 1 | Masthead hero | single | `frameworks_hero.png`                                |
-| 2 | Field Guide   | pair   | `frameworks_2_cmmc.png` then `frameworks_2_au-e8.png` |
-| 3 | Field Guide   | single | `frameworks_3.png`                                   |
-| 4 | Divergence    | pair   | `frameworks_4_cmmc.png` then `frameworks_4_au-e8.png` |
+| #   | Block         | Kind   | File(s)                                               |
+| --- | ------------- | ------ | ----------------------------------------------------- |
+| 1   | Masthead hero | single | `frameworks_hero.png`                                 |
+| 2   | Field Guide   | pair   | `frameworks_2_cmmc.png` then `frameworks_2_au-e8.png` |
+| 3   | Field Guide   | single | `frameworks_3.png`                                    |
+| 4   | Divergence    | pair   | `frameworks_4_cmmc.png` then `frameworks_4_au-e8.png` |
 
 Later Observations carries no artifact.
 

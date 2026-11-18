@@ -1,6 +1,8 @@
 import frameworksThumb from '@/assets/portfolio/case-studies/whitehawk/products/compliance-frameworks/frameworks_thumbnail.png'
 import portfolioReportThumb from '@/assets/portfolio/case-studies/whitehawk/products/cyber-risk-portfolio/portfolio_report-thumbnail.png'
 import cyberRiskRatingThumb from '@/assets/portfolio/case-studies/whitehawk/products/cyber-risk-rating/cyber-risk-scorecard_thumbnail.png'
+import riskAssessmentPlatformThumb from '@/assets/portfolio/case-studies/whitehawk/products/risk-assessment-platform/product-risk-assessment-platform_thumbnail.png'
+import tprmPlatformThumb from '@/assets/portfolio/case-studies/whitehawk/products/tprm-platform/tprm_thumbnail.png'
 
 export interface Product {
   id: string
@@ -24,8 +26,16 @@ export const PRODUCTS: Array<Product> = [
     name: 'Compliance Frameworks',
     thumbnail: frameworksThumb,
   },
-  { id: 'client-a', name: 'Client A', thumbnail: null },
-  { id: 'client-b', name: 'Client B', thumbnail: null },
+  {
+    id: 'risk-assessment-platform',
+    name: 'Risk Assessment Platform',
+    thumbnail: riskAssessmentPlatformThumb,
+  },
+  {
+    id: 'tprm-platform',
+    name: 'Third Party Risk Management Platform',
+    thumbnail: tprmPlatformThumb,
+  },
 ]
 
 // Schema for a product chapter page. Chapters are data; components/portfolio/products
@@ -60,6 +70,20 @@ export type ArtifactSlot =
       // to read at half width.
       stacked?: boolean
     }
+  // Two states of one screen, stacked in one frame. Hover previews `active`;
+  // click, Enter, or Space latches it. For a screen whose point is the state
+  // change: showing one state loses the argument, showing both side by side
+  // turns it into a comparison. Use `pair` for two different screens.
+  | {
+      kind: 'toggle'
+      rest: Artifact
+      active: Artifact
+      caption: string
+      width?: ArtifactWidth
+      // The button's accessible name. Says what pressing does, not what either
+      // image looks like. Required so a control cannot ship unnamed.
+      label: string
+    }
 
 export type BlockContent = { kind: 'prose'; text: string } | ArtifactSlot
 
@@ -71,7 +95,10 @@ export interface ChapterBlock {
 export interface ProductChapter {
   title: string
   subtitle?: string
-  masthead: {
+  // Tier 1 only. A chapter that omits it is tier 2: its blocks start under the
+  // title, with no hero and no Specimen/Hypothesis/Provenance triple. A tier 2
+  // chapter that needs a Specimen or Provenance section writes it as a block.
+  masthead?: {
     specimen: string
     hypothesis: string
     provenance: string
